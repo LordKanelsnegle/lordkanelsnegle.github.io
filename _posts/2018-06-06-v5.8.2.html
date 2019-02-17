@@ -1,0 +1,58 @@
+---
+layout: post
+title: v5.8.2
+permalink: /changelog/:title
+features: 4
+adjustments: 16
+---
+<div class="colorlib-work-featured colorlib-bg-white">
+	<div class="container">
+		<div class="row mobile-wrap">
+			
+			<div class="animate-box">
+				<div class="desc">
+					<h2>New Features:</h2>
+					<ul style="list-style-type:disc">
+						<li>Users will now be notified when one of their actions has caused an exception to avoid people repeatedly trying to execute the same bot-breaking code multiple times</li>
+						<li>All Discord requests will now automatically retry if they failed, which should increase bot reliability and reduce the number of exceptions/errors the bot encounters</li>
+						<li>There is now a <b>{user} is my best friend :3</b> status, where {user} is set to the user that has used the largest number of commands</li>
+						<li>Completely redigned discordbot websites to make them smexy (bots.discord.by and discordbots.org)</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<div class="colorlib-work-featured">
+	<div class="container">
+		<div class="row mobile-wrap">
+			
+			<div class="animate-box">
+				<div class="desc">
+					<h2>Bug Fixes and Adjustments:</h2>
+					<ul style="list-style-type:disc">
+						<li>Fixed a problem with timed autoroles and reminders that caused the bot to crash for durations longer than 24 days, largely increasing performance in the process</li>
+						<li>Removed a chunk of autorole code that turned out to be completely useless (must’ve been written at 2am)</li>
+						<li>Split the message handler in half so that autoroles and guildstats are handled separately, hopefully this should reduce the amount of gateway blocking that occurs</li>
+						<li>Enhanced the way connectfour handles reactions being added, increasing performance significantly</li>
+						<li>Reworked the battle command from the ground up - it now behaves like the rest of the games, with similar commands and display formats as well as improved efficiency/reliability/readability</li>
+						<li>Cleaned up other game formats so that they all have a consistent format</li>
+						<li>Bot will no longer send annoying “Commands cannot be used in this channel” on the support server (wont affect most people)</li>
+						<li>Statuses involving users will no longer include me as I’d like them to reflect the community :3</li>
+						<li>Sprinkled with love and affection</li>
+						<li>Fixed a problem that caused <b>reminder</b>s to trigger multiple times as they weren't being cleared from the database</li>
+						<li>Cinnamon should now properly DM exceptions to me, as intended from a few patches ago, along with the message context and other debugging data</li>
+						<li>Resolved an issue that prevented users from joining <b>cah</b> games which were already in progress</li>
+						<li>Fixed a bug that caused the bot to throw an exception if a second <b>cah</b> card was picked with a numeric value equal to the number of cards a user has</li>
+						<li>Flattened out a problem in which the bot would throw an exception if it attempted to delete a non-existent message</li>
+						<li><b>connectfour</b> board embeds will now display "Gameover! {user} won." in the footer</li>
+						<li>This change doesn't affect users, but the way exceptions are handled and logged has now been changed to clutter/spam the log less</li>
+						<li>Sprinkled with love and affection</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>

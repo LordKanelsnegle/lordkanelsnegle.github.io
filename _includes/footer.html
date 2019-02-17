@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<footer id="colorlib-footer">
+	<div class="container">
+
+		<div class="row row-pb-md">
+    
+			<div class="col-md-4 colorlib-widget" style="padding-left: 100px">
+				<h4>About Cinnamon</h4>
+        			<p>I designed Cinnamon with a primary focus on a bot with games that can be played with friends, almost like a game cafe bundled into a single bot, with minimal setup but high customisability. A full list of features can be seen on the home page and a more in-depth coverage can be found on the commands page. </p>
+      			</div>
+      
+			<div class="col-md-4 colorlib-widget" style="padding-left: 125px">
+				<h4>Information</h4>
+				<p></p><ul class="colorlib-footer-links">
+				{% if page.title == 'Home' %}
+					<li><a href="#"><i class="icon-eye2"></i> Home</a></li>
+				{% else %}
+					<li><a href="/"><i class="icon-check"></i> Home</a></li>
+				{% endif %}
+				
+				{% if page.title == 'Commands' %}
+					<li><a href="#"><i class="icon-eye2"></i> Commands</a></li>
+				{% else %}
+					<li><a href="/commands"><i class="icon-check"></i> Commands</a></li>
+				{% endif %}
+				
+				{% if page.title == 'Contact' %}
+					<li><a href="#"><i class="icon-eye2"></i> Contact</a></li>
+				{% else %}
+					<li><a href="/contact"><i class="icon-check"></i> Contact</a></li>
+				{% endif %}
+				
+				{% if page.title == 'Donate' %}
+					<li><a href="#"><i class="icon-eye2"></i> Donate</a></li>
+				{% else %}
+					<li><a href="/donate"><i class="icon-check"></i> Donate</a></li>
+				{% endif %}
+				</ul><p></p>
+			</div>
+			
+			<div class="col-md-4 colorlib-widget" style="padding-left: 100px">
+				<h4>Recent Patches</h4>
+				<p><ul class="colorlib-footer-links">
+				{% for post in site.posts limit:3 %}
+					<li><a href="{{ post.url }}"><i class="icon-cog2"></i>{{ post.title }}</a><br><p class="admin"><span>{{ post.date | date_to_long_string }}</span></p></li>
+				{% endfor %}
+				</ul></p>
+			</div>
+
+		</div>
+
+	</div>
+	<div class="copy">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<p>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;{{ 'now' | date: "%Y" }} All rights reserved | Made in collaboration with <a href="https://colorlib.com" target="_blank">Colorlib</a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --><br>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<div class="gototop js-top">
+	<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+</div>
+
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="/js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="/js/jquery.stellar.min.js"></script>
+	<!-- YTPlayer -->
+	<script src="/js/jquery.mb.YTPlayer.min.js"></script>
+	<!-- Owl carousel -->
+	<script src="/js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="/js/jquery.magnific-popup.min.js"></script>
+	<script src="/js/magnific-popup-options.js"></script>
+	<!-- Counters -->
+	<script src="/js/jquery.countTo.js"></script>
+	<!-- Main -->
+	<script src="/js/main.js"></script>
+
+</html>

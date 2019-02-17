@@ -1,0 +1,54 @@
+---
+layout: post
+title: v7.0.0
+permalink: /changelog/:title
+features: 2
+adjustments: 13
+---
+<div class="colorlib-work-featured colorlib-bg-white">
+	<div class="container">
+		<div class="row mobile-wrap">
+			
+			<div class="animate-box">
+				<div class="desc">
+					<h2>New Features:</h2>
+					<ul style="list-style-type:disc">
+						<li><b>Migrated to .NET Core!</b> After over a month of downtime due to this migration process (largely because of issues with preserving data), Cinnamon is finally back up and running :D</li>
+						<li>Bot's status will be set to idle while rebooting so that users know the bot will not respond</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<div class="colorlib-work-featured">
+	<div class="container">
+		<div class="row mobile-wrap">
+			
+			<div class="animate-box">
+				<div class="desc">
+					<h2>Bug Fixes and Adjustments:</h2>
+					<ul style="list-style-type:disc">
+						<li>Completely reworked the way users are handled by the database, exponentially improving boot time and making it infinitely faster (literally)</li>
+						<li>Reduced the downtime between updates so that Cinnamon will now only be down for a minute or so while updating</li>
+						<li>Updated the way timestamps are displayed when using the <b>userinfo</b> command for consistency</li>
+						<li>The "Favourite Command" section of the <b>userinfo</b> command now also displays the command's group (e.g. "cah join" instead of just "join")</li>
+						<li>Vastly optimised the <b>Battle</b> MMR algorithm and gains and losses are now applied regardless of the MMR difference of the players, firstly because it was a poor attempt at preventing MMR grinding and secondly because it caused confusion</li>
+						<li>The final screen of a <b>Battle</b> now displays the players in order of points from highest to lowest, instead of in order of when they joined the lobby, to clarify who obtained which position (1st, 2nd, 3rd, etc)</li>
+						<li>Edited <b>userinfo</b> and the "... is the deathbattle champion" status so that both use "Battle" instead of "deathbattle" for consistency</li>
+						<li>Corrected the <b>credits</b> command to only display credits for the new joined website instead of the old, individual changelog and commands websites</li>
+						<li>Fixed a bug that caused <b>gaydar</b> and <b>ship</b> bars to be filled incorrectly</li>
+						<li><b>gaydar</b> and <b>ship</b> percentages no longer have a leading 0 when below 10%</li>
+						<li><b>gaydar</b> and <b>ship</b> display bars are now spaced correctly</li>
+						<li>Updated the website, removing the 'Changelog' tab from navigation and adding the 'Donate' tab</li>
+						<li>Website music is now off by default</li>
+						<li>Unknown error message now has a facepalming panda</li>
+						<li>Sprinkled with love and affection</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>

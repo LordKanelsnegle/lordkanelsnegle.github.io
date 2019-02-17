@@ -1,0 +1,79 @@
+---
+layout: default
+title: Changelog
+---
+<section id="home" class="video-hero" style="height: 500px; background-image: url(images/cover_img_1.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">
+<div class="overlay"></div>
+	<div class="display-t display-t2 text-center">
+		<div class="display-tc display-tc2">
+			<div class="container">
+				<div class="col-md-12 col-md-offset-0">
+					<div class="animate-box">
+						<h2>Changelog</h2>
+						<p class="breadcrumbs">
+						{% for post in site.posts limit:3 %}
+							<span><a href="{{ post.url }}">{{ post.title }}</a></span>
+						{% endfor %}
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% assign pageCount = 1 %}
+<div class="colorlib-blog">
+  	{% for post in site.posts %}
+		{% assign nMod = forloop.index0 | modulo:9 %}
+		{% assign tMod = forloop.index0 | modulo:3 %}
+		{% if forloop.first %}
+			<div id="1" class="container">
+			<div class="row">
+		{% elsif nMod == 0 %}
+			</div></div>
+			<div id="{{ forloop.index0 | divided_by:9 | plus:1 }}" class="container hidden">
+			<div class="row">
+			{% assign pageCount = pageCount | plus:1 %}
+		{% elsif tMod == 0 %}
+			</div>
+			<div class="row">
+		{% endif %}
+		<div class="col-md-4 animate-box">
+			<article>
+				<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+				<p class="admin"><span>{{ post.date | date_to_long_string }}
+				{% if post.category == 'WIP' or post.category == 'Game Update' %}
+					 - {{ post.category }}
+				{% endif %}
+				</span></p>
+				<p><b>{{ post.features }}</b> New Features<br><b>{{ post.adjustments }}</b> Bug Fixes and Adjustments</p>
+			</article>
+		</div>
+	{% endfor %}
+	</div></div>
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<ul class="pagination">
+				<li onclick="display(1)"><a href="#">&laquo;</a></li>
+				{% for i in (1..pageCount) %}
+					{% if forloop.first %}
+						<li id="1p" class="active" onclick="display(1)"><a href="#">1</a></li>
+					{% else %}
+						<li id="{{ forloop.index }}p" onclick="display({{ forloop.index }})"><a href="#">{{ forloop.index }}</a></li>
+					{% endif %}
+				{% endfor %}
+				<li onclick="display({{ pageCount }})"><a href="#">&raquo;</a></li>
+			</ul>
+		</div>
+	</div>
+	<script>
+		var active = 1;
+		function display(num){
+			document.getElementById(active + "p").className = "";
+			document.getElementById(active).className = "container hidden";
+			document.getElementById(num + "p").className = "active";
+			document.getElementById(num).className = "container";
+			active = num;
+		}
+	</script>
+</div>

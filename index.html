@@ -1,0 +1,269 @@
+---
+layout: default
+title: Home
+total_guilds: 316
+total_users: 131300
+total_commands: 67
+---
+
+<!-- "Header" -->
+<div class="colorlib-loader"></div>
+<section id="home" class="video-hero" style="height: 700px; background-image: url(images/cover_img_1.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">
+<div class="overlay"></div>
+	<a class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=vqqt5p0q-eU',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></a> 
+	<div class="display-t text-center">
+		<div class="display-tc">
+			<img class="bot-avatar" src="https://cdn.discordapp.com/avatars/341135555976757250/cc5614a23c4d07e294234ec4019b4f49.png?size=2048">
+			<div class="container">
+				<div class="col-md-12 col-md-offset-0">
+					
+					<div class="animate-box">
+						<h2 style="margin-top:10px;margin-bottom:-10px">Take your community to new heights</h2>
+						<p>with Cinnamon's high quality features :)</p>
+						<p style="margin-top: 30px;"><a href="https://discordapp.com/oauth2/authorize?client_id=341135555976757250&scope=bot&permissions=268823616" target="_blank" class="btn btn-primary btn-lg btn-custom">Invite Cinnamon!</a></p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Overview Features/Specialties -->
+<div class="colorlib-services colorlib-bg-white">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 text-center animate-box">
+				<div class="services">
+					<span class="icon">
+						<i class="icon-download"></i>
+					</span>
+					<div class="desc">
+						<h3>Online 24/7</h3>
+						<p>Not only will Cinnamon automatically reboot if it ever fails, it also messages the owner with a full crash report in the unlikely event that an error occurs.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 text-center animate-box">
+				<div class="services">
+					<span class="icon">
+						<i class="icon-layers"></i>
+					</span>
+					<div class="desc">
+						<h3>Tons of Features</h3>
+						<p>With new updates released regularly, Cinnamon is brimming with features ranging from utility and moderation to games and fun.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 text-center animate-box">
+				<div class="services">
+					<span class="icon">
+						<i class="icon-browser"></i>
+					</span>
+					<div class="desc">
+						<h3>Easy to Use</h3>
+						<p>All commands are designed to be simple and intuitive, with a fully explained documentation available as well.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 text-center animate-box">
+				<div class="services">
+					<span class="icon">
+						<i class="icon-adjustments"></i>
+					</span>
+					<div class="desc">
+						<h3>Fully Customisable</h3>
+						<p>Everything from the server prefix to the custom game rules used in game commands is entirely customisable.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 text-center animate-box">
+				<div class="services">
+					<span class="icon">
+						<i class="icon-chat"></i>
+					</span>
+					<div class="desc">
+						<h3>Help &amp; Support</h3>
+						<p>With our server dedicated solely to help and feedback you can rest assured that any queries will be addressed within a maximum of 8 hours.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 text-center animate-box">
+				<div class="services">
+					<span class="icon">
+						<i class="icon-beaker"></i>
+					</span>
+					<div class="desc">
+						<h3>Frequently Updated</h3>
+						<p>Cinnamon is updated several times a month, constantly bringing in waves of bug fixes and new features.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Stats bar -->
+<div id="colorlib-counter" class="colorlib-counters" style="background-image: url(images/cover_img_1.jpg);" data-stellar-background-ratio="0.5">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				
+				<div class="col-md-4 col-sm-4 text-center animate-box">
+					<div class="counter-entry">
+						<span class="icon"><i class="flaticon-dove"></i></span>
+						<div class="desc">
+							<span class="colorlib-counter js-counter" data-from="0" data-to="{{ page.total_commands }}" data-speed="2000" data-refresh-interval="50"></span>
+							<span class="colorlib-counter-label">Commands</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-sm-4 text-center animate-box">
+					<div class="counter-entry">
+						<span class="icon"><i class="flaticon-ribbon"></i></span>
+						<div class="desc">
+							<span class="colorlib-counter js-counter" data-from="0" data-to="{{ page.total_guilds }}" data-speed="2000" data-refresh-interval="50"></span>
+							<span class="colorlib-counter-label">Total Guilds</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-sm-4 text-center animate-box">
+					<div class="counter-entry">
+						<span class="icon"><i class="flaticon-church"></i></span>
+						<div class="desc">
+							<span class="colorlib-counter js-counter" data-from="0" data-to="{{ page.total_users }}" data-speed="2000" data-refresh-interval="50"></span>
+							<span class="colorlib-counter-label">Total Users</span>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Features go here next to gifs showcasing them: Welcome/Farewell, Games, Fun, Integrations (APIs) buttons link to their pos on commands page -->
+<div class="colorlib-work">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="work-flex">
+					<div class="half animate-box">
+						<div class="row no-gutters">
+							<div class="col-md-12 col-md-push-12 no-gutters">
+								<a href="#" class="work-img" style="background-image: url(https://www.ledr.com/colours/grey.jpg);"></a>
+							</div>
+						</div>
+					</div>
+					<div class="half animate-box">
+						<div class="row no-gutters">
+							<div class="col-md-12 col-md-pull-12 no-gutters">
+								<div class="display-t desc">
+									<div class="display-tc">
+										<h2>Welcomes/Farewells</h2>
+										<p>Two of Cinnamon's most popular features are the fully customisable welcome and farewell messages. The messages are sent to whichever text channel you've set as the <b>message channel</b> and can include mentions of channels, users, roles, and even the user that joined or left! Not only are the welcome and farewell messages fully customisable, you can also have multiple welcome or farewell messages per guild if you'd like one to be picked at random when a user joins or leaves.</p>
+										<p><a href="/commands#configuration" class="btn btn-primary btn-outline with-arrow">Documentation <i class="icon-arrow-right3"></i></a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="work-flex">
+					<div class="half animate-box">
+						<div class="row no-gutters">
+							<div class="col-md-12 no-gutters">
+								<a href="#" class="work-img" style="background-image: url(https://www.ledr.com/colours/grey.jpg);"></a>
+							</div>
+						</div>
+					</div>
+					<div class="half animate-box">
+						<div class="row no-gutters">
+							<div class="col-md-12 no-gutters">
+								<div class="display-t desc">
+									<div class="display-tc">
+										<h2>Multiplayer Games</h2>
+										<p>The entire reason for Cinnamon's creation was because I wanted a bot that had several multiplayer games which I could play with guild members and friends whenever I got bored. At the moment games are restricted by channel but I intend to implement cross-guild gameplay in the near future. Some games include <b>Cards Against Humanity</b>, <b>Connect Four</b>, a game of my own creation named <b>Battle</b>, and soon <b>Tetris</b>!</p>
+										<p><a href="/commands#games" class="btn btn-primary btn-outline with-arrow">Documentation <i class="icon-arrow-right3"></i></a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="work-flex">
+					<div class="half animate-box">
+						<div class="row no-gutters">
+							<div class="col-md-12 col-md-push-12 no-gutters">
+								<a href="#" class="work-img" style="background-image: url(https://www.ledr.com/colours/grey.jpg);"></a>
+							</div>
+						</div>
+					</div>
+					<div class="half animate-box">
+						<div class="row no-gutters">
+							<div class="col-md-12 col-md-pull-12 no-gutters">
+								<div class="display-t desc">
+									<div class="display-tc">
+										<h2>Fun and Miscellaneous</h2>
+										<p>Cinnamon has dozens of fun commands to keep any guild entertained, ranging from ships and waifu ratings to gaydars and an intentionally silly insult generator. Aside from that there are also several utility commands including a quotation system and avatar enlarger guaranteed to display the largest possible version of a user's profile picture.</p>
+										<p><a href="/commands#other" class="btn btn-primary btn-outline with-arrow">Documentation <i class="icon-arrow-right3"></i></a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="work-flex">
+					<div class="half animate-box">
+						<div class="row no-gutters">
+							<div class="col-md-12 no-gutters">
+								<a href="#" class="work-img" style="background-image: url(https://www.ledr.com/colours/grey.jpg);"></a>
+							</div>
+						</div>
+					</div>
+					<div class="half animate-box">
+						<div class="row no-gutters">
+							<div class="col-md-12 no-gutters">
+								<div class="display-t desc">
+									<div class="display-tc">
+										<h2>Stats and Integrations</h2>
+										<p>Another popular feature is the guild, channel, and user based activity tracking system which includes all kinds of stats including average hourly activity and records such as most messages sent in a day. Soon Cinnamon will even be able to analyse these statistics to determine the health of a guild and potential remedial action to keep the guild lively if necessary. Cinnamon can also retrieve user data thanks to its integrations with League of Legends, Fortnite, Osu and Overwatch. The aim is to eventually make it possible to link game accounts to Cinnamon so that user data is synced with Discord, but this may not be implemented for a while if at all.</p>
+										<p><a href="/commands#info" class="btn btn-primary btn-outline with-arrow">Documentation <i class="icon-arrow-right3"></i></a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Subscribe thingy...? -->
+<div id="colorlib-subscribe" class="colorlib-subscribe" style="background-image: url(images/cover_img_1.jpg);" data-stellar-background-ratio="0.5">
+	<div class="overlay"></div>
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1 text-center colorlib-heading animate-box">
+					<h2>Enjoying Cinnamon? Consider donating</h2>
+					<p>Not only will you help me cover Cinnamon's hosting expenses, you'll also receive several perks as a Donator!</p>
+					<p style="margin-top: 30px;"><a href="/donate" class="btn btn-primary btn-lg btn-custom">Find out more</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

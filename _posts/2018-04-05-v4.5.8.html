@@ -1,0 +1,63 @@
+---
+layout: post
+title: v4.5.8
+permalink: /changelog/:title
+features: 4
+adjustments: 13
+category: Game Update
+---
+<div class="colorlib-work-featured colorlib-bg-white">
+	<div class="container">
+		<div class="row mobile-wrap">
+			
+			<div class="animate-box">
+				<div class="desc">
+					<h2>New Features:</h2>
+					<ul style="list-style-type:disc">
+						<li>Added an <b>sql</b> command which allows me to edit the database remotely - won't affect anyone else but still</li>
+						<li>Added secondary <b>quote</b> command that can be used to create fake quotes (see <a href="https://lordkanelsnegle.github.io/commands">commands page</a> for full details)</li>
+						<li>As a result of the first Adjustment shown below, added a new command <b>dab</b> to replace the dab response</li>
+						<li><h4 style="margin: 0;">Cards Against Humanity</h4>This is a game I was really excited to try to recreate, it's always tons of fun to play while in a vc with some friends. The basis of the game is that everyone starts with 7 <b>white cards</b> and a <b>black card</b> is placed in the centre. The black cards each have a sentence with gaps in it or a question of some kind, while the white cards contain a phrase designed to fill in the gaps of the black cards. Each turn a new black card is placed in the middle and players choose cards from their hands to create the funniest sentence when combined with the black card. The winner is chosen by a <b>Card Czar</b> and the first player to 10 points wins.<br>In my adaptation of this game I've included a lot of different configurable options:
+							<ul>
+								<li>The number of blank cards (allow players to enter their own answers) in the deck (default: 10)</li>
+								<li>Number of seconds before skipping a player's turn for idling (default: 60)</li>
+								<li>The score needed to win (default: 10)</li>
+								<li>Maximum number of players (default: 10)</li>
+								<li>Toggle whether users can join the game while it's ongoing or not</li>
+							</ul>If you encounter any bugs please let me know. For more information and command usage see the <a href="https://lordkanelsnegle.github.io/commands">commands page</a>.</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<div class="colorlib-work-featured">
+	<div class="container">
+		<div class="row mobile-wrap">
+			
+			<div class="animate-box">
+				<div class="desc">
+					<h2>Bug Fixes and Adjustments:</h2>
+					<ul style="list-style-type:disc">
+						<li>Apparently at some point I removed the responses feature but forgot to remove it from the rest of my code/the database so I've done that now - all responses and the <b>responses</b> command have been removed</li>
+						<li>Bot disabling and re-enabling caused a whole bunch of bullshittery so I've disabled that feature all together</li>
+						<li>Made both of Cinnamon's sites nicer and made the music controllable (because autoplayed music which can't be paused is rather irritating)</li>
+						<li>Fixed a bug which broke all database reliant commands as a result of the last patch</li>
+						<li>Fixed a small problem with admin commands so that they work as intended</li>
+						<li>Removed the <b>set</b> admin command</li>
+						<li>Fixed a bug that could cause streaks to give negative bonuses</li>
+						<li>Cleaned up a bunch of the commands</li>
+						<li>Fixed a bug in which log files were being created as .AxA and .PxP files instead of .txt</li>
+						<li>Sorted out another log file issue that caused file names to become ridiculously long</li>
+						<li>Renamed <b>commandtc</b> command to <b>commandchannel</b></li>
+						<li>Removed the limit of only 3 command channels</li>
+						<li>Broadcasts are now a random color</li>
+						<li>Sprinkled with love and affection</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>

@@ -1,0 +1,446 @@
+---
+layout: default
+title: Commands
+---
+<section id="home" class="video-hero" style="height: 500px; background-image: url(images/cover_img_1.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">
+	<div class="overlay"></div>
+	<div class="display-t display-t2 text-center">
+		<div class="display-tc display-tc2">
+			<div class="container">
+				<div class="col-md-12 col-md-offset-0">
+					<div class="animate-box">
+						
+						<h2>Commands</h2>
+						<p class="breadcrumbs">
+						<span><a href="#configuration">Configuration</a></span>
+						<span><a href="#info">Info</a></span>
+						<span><a href="#games">Games</a></span>
+						<span><a href="#other">Other</a></span>
+						</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="main-content">
+	<div class="colorlib-bg-white">
+		<div class="container">
+			<div class="row animate-box">
+			
+				<h2 id="intro">Help!</h2>
+				<p class="heading">So you've stumbled across Cinnamon but haven't the faintest clue how to use him. Or perhaps you've just forgotten one or two commands and how to properly use them. Heck, maybe you're just here because you've got nothing better to be doing. Either way, you'll find a full list of every command, its aliases, description, and example usage below :3</p>
+				<p class="centerText" style="font-size:12px;margin-bottom:25px"><i>Please note that Cinnamon is still quite far from completion and as such it's possible (though unlikely) that you may run into bugs. If you are ever in a position where Cinnamon displayed unexpected behaviour such as failing to respond to a command, please let me know instead of simply kicking him so that I can fix the problem.</i></p>
+			
+			</div>
+		</div>
+	</div>
+	<div>
+		<div class="container">
+			<div class="row animate-box">
+			
+				<h3 id="syntax">Syntax</h3>
+				<img src="https://i.imgur.com/5dLoCP2.png" alt="Command Syntax Table" class="center" />
+				<p class="centerText">There are some sub-commands with the alias <code>' '</code> - this means that if nothing is written after the parent command, this command will be executed by default. For example, <code>c!jm list</code> and simply <code>c!jm</code> will both list the server's welcome messages. When using a role, channel, or user as an argument you can use their ID, tag, or name.<br><b>All textual arguments used in a command (except the last one) must be enclosed with quotation marks if they contain spaces (shown below).</b><br><code>c!ship "Lord Kanelsnegle" John Cena</code></p>
+			
+			</div>
+		</div>
+	</div>
+	<div class="colorlib-bg-white">
+		<div class="container">
+			<div class="row animate-box">
+			
+				<h3 id="configuration">Configuration</h3>
+				<p class="heading">The following commands are used to configure the bot to your liking so that it can suit your server's needs as perfectly as possible. Every single one of these commands can ONLY be used by the server owner or Cinnamon moderators (the role for this can be set using the `modrole` command).</p>
+				
+				<h4 id="prefix">prefix</h4>
+				<p>Set the bot’s command prefix, no longer than 10 characters.
+				<br><code>Usage: prefix &lt;prefix...&gt;</code></p>
+				
+				<h4 id="deletemsg">deletemsg</h4>
+				<p>Toggles the <b>deletemsg</b> configuration option, which is disabled by default. When enabled all command invoking messages will be deleted once the command executes.
+				<br><code>Usage: deletemsg</code></p>
+				
+				<h4 id="msgchannel">msgchannel</h4>
+				<p style="margin-bottom:16px">Set the channel that you want messages to be sent to when users join or leave the server, as well as information from the latest patch and any important notices. By default the bot will automatically set this to your guild’s welcome channel - if there isn’t one set then it’ll be set to the first channel found with the word “announcement”. If the bot still can’t find a default channel the message channel will be set to the first channel which the bot can send messages to. Set this to <code>off</code> or <code>disable</code> to disable messages all together, though it’s bly recommended that you keep notifications enabled in case of any major changes to Cinnamon’s functionality.
+				<br><code>Usage: msgchannel &lt;textChannel...&gt;|off|disable</code></p>
+				
+				<button id="cmdchannel" class="collapsible"><b>Command Channels</b> - cmdchannel</button>
+				<div class="content">
+					
+					<h4 style="margin-top:20px">add, +, create</h4>
+					<p>Add a text channel to your guild’s list of command channels. If your guild has any command channels then Cinnamon’s command usage will be restricted to those channels.
+					<br><code>Usage: cmdchannel add &lt;textChannel...&gt;</code></p>
+					
+					<h4>delete, del, -, remove</h4>
+					<p>Remove a text channel from the list of command channels set for your guild.
+					<br><code>Usage: cmdchannel delete &lt;textChannel...&gt;</code></p>
+					
+					<h4>list, ' '</h4>
+					<p>Lists all of the currently set command channels for your guild.
+					<br><code>Usage: cmdchannel list</code></p>
+					
+					<h4>clear, clr</h4>
+					<p>Remove all of the command channels set for your guild.
+					<br><code>Usage: cmdchannel clear</code></p>
+				
+				</div>
+				
+				<button id="joinmsg" class="collapsible"><b>Join Messages</b> - joinmsg, jm</button>
+				<div class="content">
+					
+					<h4 style="margin-top:20px">add, +, create</h4>
+					<p>Add a message to the list of welcome messages that are used to welcome users to your guild when they join; if there is more than one welcome message set, the bot will pick one at random when a user joins. By default the user will be mentioned at the beginning of the message, but you can use <code>{user}</code> at any point in your message if you would like to move where the mention is, e.g. <code>joinmsg add Welcome {user}!</code> will output <code>Welcome @Username!</code> when a user joins. There is a limit of 15 welcome messages per guild.
+					<br><code>Usage: joinmsg add &lt;message...&gt;</code></p>
+					
+					<h4>delete, del, -, remove</h4>
+					<p>Remove a message from the list of welcome messages that are used to welcome users to your guild when they join. To get the number/position of the message you want to remove, use the <code>joinmsg list</code> command.
+					<br><code>Usage: joinmsg delete &lt;numericPosition&gt;</code></p>
+					
+					<h4>list, ' '</h4>
+					<p>Lists all of the currently existing welcome messages for your guild alongside their respective positions in the list. Use the reactions added to the message to flip through the pages.
+					<br><code>Usage: joinmsg list</code></p>
+					
+					<h4>clear, clr</h4>
+					<p>Remove all of the welcome messages set for your guild.
+					<br><code>Usage: joinmsg clear</code></p>
+				
+				</div>
+				
+				<button id="leavemsg" class="collapsible"><b>Leave Messages</b> - leavemsg, lm</button>
+				<div class="content">
+					
+					<h4 style="margin-top:20px">add, +, create</h4>
+					<p>Add a message to the list of farewell messages that are used to say goodbye to users in your guild when they leave; if there is more than one farewell message set, the bot will pick one at random when a user leaves. By default the user’s name will be at the beginning of the message, but you can use <code>{user}</code> at any point in your message if you would like to move where their name is, e.g. <code>leavemsg add Farewell {user}!</code> will output <code>Farewell Username#1234!</code> when a user leaves. There is a limit of 15 farewell messages per guild.
+					<br><code>Usage: leavemsg add &lt;message...&gt;</code></p>
+					
+					<h4>delete, del, -, remove</h4>
+					<p>Remove a message from the list of farewell messages that are used to say goodbye to users in your guild when they leave. To get the number/position of the message you want to remove, use the <code>leavemsg list</code> command.
+					<br><code>Usage: leavemsg delete &lt;numericPosition&gt;</code></p>
+					
+					<h4>list, ' '</h4>
+					<p>Lists all of the currently existing farewell messages for your guild alongside their respective positions in the list. Use the reactions added to the message to flip through the pages.
+					<br><code>Usage: leavemsg list</code></p>
+					
+					<h4>clear, clr</h4>
+					<p>Remove all of the farewell messages set for your guild.
+					<br><code>Usage: leavemsg clear</code></p>
+				
+				</div>
+				
+				<button id="autorole" class="collapsible"><b>Automated Roles</b> - autorole, ar</button>
+				<div class="content">
+					
+					<h4 style="margin-top:20px">add, +, create</h4>
+					<p>Add a role to your guild’s list of automated roles, with an optional condition.</p>
+					<p>A timespan can be included so that users are only given the role after they’ve been in the server for a certain amount of time - e.g. <code>autorole add Role 10h</code> will add the role “Role” to users that have been in the server for 10 hours or longer. The bot will only accept timespans in terms of weeks, days, hours, minutes, and seconds.</p>
+					<p>Likewise, a message count can be included so that users are only given the role after they’ve sent a certain amount of messages - e.g. <code>autorole add Role 10 messages</code> will add the role “Role” to users that have sent 10 or more messages. When using this condition you MUST include the word “message” or “msg” to specify that it is a message condition and not a timespan.</p>
+					<p>If no timespan or message number is supplied then the role will be immediately given to new users as soon as they join the guild.
+					<br><code>Usage: autorole add &lt;role...&gt; [timespan|messageCount]</code></p>
+					
+					<h4>delete, del, -, remove</h4>
+					<p>Remove a role from the list of automated roles set for your guild, preventing it from being added to future users. You can optionally add the word <code>fully</code> to the end to additionally remove the role from all current users.
+					<br><code>Usage: autorole delete &lt;role...&gt;</code>
+					<br><code>Alternate Usage: autorole delete &lt;role...&gt; fully</code></p>
+					
+					<h4>list, ' '</h4>
+					<p>Lists all of the currently set automated roles for your guild.
+					<br><code>Usage: autorole list</code></p>
+					
+					<h4>clear, clr</h4>
+					<p>Remove all of the automated roles set for your guild.
+					<br><code>Usage: autorole clear</code></p>
+				
+				</div>
+				<p style="margin-bottom:-5px;color:white;">.</p>
+			</div>
+		</div>
+	</div>
+	<div>
+		<div class="container">
+			<div class="row animate-box">
+			
+				<h3 id="info">Info</h3>
+				<p class="heading">This group of commands gives you any information you may require, whether about the bot, commands, or scoreboards.</p>
+				
+				<h4 id="help">help</h4>
+				<p>Provides useful links such as the one that probably sent you here. Providing a command as an argument will link you directly to that command's position on this page.
+				<br><code>Usage: help</code>
+				<br><code>Alternate Usage: help &lt;commandName&gt;</code></p>
+				
+				<h4 id="info">info, i, stats</h4>
+				<p>Display information about the bot.
+				<br><code>Usage: info</code></p>
+
+				<h4 id="configuration">configuration, config, conf</h4>
+				<p>Displays the bot’s current configuration.
+				<br><code>Usage: configuration</code></p>
+
+				<h4 id="ping">ping</h4>
+				<p>Returns the bot’s latency. THE <b>BOT’S</b> LATENCY.
+				<br><code>Usage: ping</code></p>
+
+				<h4 id="userinfo">userinfo, user info, ui, whois, show, profile, user</h4>
+				<p>Displays the profile of a given user, or yours if no user is specified
+				<br><code>Usage: userinfo [user...]</code></p>
+
+				<h4 id="guildinfo">guildinfo, guild info, gi, guild, serverinfo, server info, si, server</h4>
+				<p>Retrieves the guild’s current information, including user count and date of creation.
+				<br><code>Usage: guildinfo</code></p>
+				
+				<h4 id="guildstats">guildstats, guild stats, gs, serverstats, server stats, ss</h4>
+				<p>Retrieves the guild’s current statistics, containing records such as the longest vc and the most users in a vc at once as well as analytics like the average guild activity per-hour and per-day.
+				<br><code>Usage: guildstats</code></p>
+				
+				<h4 id="credits">credits</h4>
+				<p>Displays credits for things like game concepts, art, and suggestions - this will be updated as the bot is developed further.
+				<br><code>Usage: credits</code></p>
+			
+			</div>
+		</div>
+	</div>
+	<div class="colorlib-bg-white">
+		<div class="container">
+			<div class="row animate-box">
+			
+				<h3 id="games">Games</h3>
+				<p class="heading">Any commands concerning games can be found below. Please note that all game commands are channel specific.</p>
+				
+				<h4 id="rps">rps</h4>
+				<p style="margin-bottom:16px">Play rock, paper, scissors with the bot.
+				<br><code>Usage: rps rock|r|paper|p|scissors|s</code></p>
+				
+				<button id="fortnite" class="collapsible"><b>Fortnite</b> - fortnite, fn</button>
+				<div class="content">
+					
+					<h4 style="margin-top:20px">profile, info, stats</h4>
+					<p>Retrieves both the overall and season-based stats of a user, sending them in a paginated message. Use the reactions added to the message to flip through the pages.
+					<br><code>Usage: fortnite profile &lt;username...&gt;</code></p>
+				
+				</div>
+				
+				<button id="cah" class="collapsible"><b>Cards Against Humanity</b> - cah</button>
+				<div class="content">
+					
+					<h4 style="margin-top:20px">setup, create</h4>
+					<p>Sets up a new CAH lobby.
+					<br><code>Usage: cah setup</code></p>
+					
+					<h4>cancel</h4>
+					<p>Cancels the lobby. This command is restricted to the Game Creator and server admin.
+					<br><code>Usage: cah cancel</code></p>
+					
+					<h4>join</h4>
+					<p>Joins an open lobby - alternatively, if there is a running CAH game in which users are allowed to join while the game is in progress, the user will join that game and be dealt their cards at the end of the current turn.
+					<br><code>Usage: cah join</code></p>
+					
+					<h4>leave, quit</h4>
+					<p>Leave the game, if you are in one.
+					<br><code>Usage: cah leave</code></p>
+					
+					<h4>kick, remove</h4>
+					<p>Remove a user from the CAH game or lobby. Please note that once removed a user cannot rejoin the CAH game and must wait for the game to end to play in that channel. This command is restricted to the Game Creator and server admin.
+					<br><code>Usage: cah remove &lt;user...&gt;</code></p>
+					
+					<h4>start</h4>
+					<p>Starts the game if at least 3 people have joined. This command is restricted to the Game Creator and server admin.
+					<br><code>Usage: cah start</code></p>
+					
+					<h4>end</h4>
+					<p>Ends the game prematurely. This command is restricted to the Game Creator and server admin.
+					<br><code>Usage: cah end</code></p>
+					
+					<h4>info, ' '</h4>
+					<p>Provides some information about Cards Against Humanity and the configuration options.
+					<br><code>Usage: cah info</code></p>
+					
+					<h4>pick</h4>
+					<p>Pick cards from your hand to fill in the blanks given. If there are multiple blanks you can pick multiple cards by separating them with spaces. If blank cards are enabled and you pick one or more blank cards, you will be prompted to enter custom phrases via DM - if you fail to do so by the end of the round your blank cards will be played as “(Blank)”. Alternatively, if you are the Card Czar, this command will allow you to pick the winning card(s) played.
+					<br><code>Usage: cah pick &lt;cardNumber&gt; [cardNumber] [cardNumber]</code></p>
+					
+					<h4>configure, config, set</h4>
+					<p>Allows you to configure the game before starting it.
+					Sub-Commands:
+					<ul>
+						<li>dropin: Toggles <code>dropin</code>, allowing users to join while the game is in progress if enabled.</li>
+						<li>blankcards: Sets the number of blank cards in the deck, no less than 0 and no more than 100.</li>
+						<li>timeout: Sets the number of seconds to wait before skipping a player, no less than 60 and no more than 300.</li>
+						<li>maxscore: Sets the score needed to win the game, no less than 5 and no more than 30.</li>
+						<li>maxplayers: Sets the maximum number of players that can join the game, no less than 3 and no more than 20.</li>
+					</ul>
+					<br><code>Usage: cah configure dropin</code>
+					<br><code>Alternate Usage: cah configure blankcards|timeout|maxscore|maxplayers &lt;value&gt;</code></p>
+				</div>
+				
+				<button id="connect4" class="collapsible"><b>Connect Four</b> - connect4, c4, cf</button>
+				<div class="content">
+					
+					<h4 style="margin-top:20px">setup, create</h4>
+					<p>Sets up a new C4 lobby.
+					<br><code>Usage: connect4 setup</code></p>
+					
+					<h4>cancel</h4>
+					<p>Cancels the lobby. This command is restricted to the Game Creator and server admin.
+					<br><code>Usage: connect4 cancel</code></p>
+					
+					<h4>join</h4>
+					<p>Joins an open lobby.
+					<br><code>Usage: connect4 join</code></p>
+					
+					<h4>leave, quit</h4>
+					<p>Leave the game, if you are in one.
+					<br><code>Usage: connect4 leave</code></p>
+					
+					<h4>end</h4>
+					<p>Ends the game prematurely. This command is restricted to the Game Creator and server admin.
+					<br><code>Usage: connect4 end</code></p>
+					
+					<h4>info, ' '</h4>
+					<p>Provides some information about how to play Connect Four.
+					<br><code>Usage: connect4 info</code></p>
+				
+				</div>
+				
+				<button id="battle" class="collapsible"><b>Battle</b> - battle</button>
+				<div class="content">
+					
+					<h4 style="margin-top:20px">setup, create</h4>
+					<p>Sets up a new Battle lobby.
+					<br><code>Usage: battle setup</code></p>
+					
+					<h4>cancel</h4>
+					<p>Cancels the lobby. This command is restricted to the Game Creator and server admin.
+					<br><code>Usage: battle cancel</code></p>
+					
+					<h4>join</h4>
+					<p>Joins an open lobby.
+					<br><code>Usage: battle join</code></p>
+					
+					<h4>leave, quit</h4>
+					<p>Leave the game, if you are in one.
+					<br><code>Usage: battle leave</code></p>
+					
+					<h4>kick, remove</h4>
+					<p>Remove a user from the Battle game or lobby. Please note that once removed a user cannot rejoin the Battle game and must wait for the game to end to play in that channel. This command is restricted to the Game Creator and server admin.
+					<br><code>Usage: battle remove &lt;user...&gt;</code></p>
+					
+					<h4>start</h4>
+					<p>Starts the game if at least 2 people have joined. This command is restricted to the Game Creator and server admin.
+					<br><code>Usage: battle start</code></p>
+					
+					<h4>info, ""</h4>
+					<p>Provides some information about how to play Battle.
+					<br><code>Usage: battle info</code></p>
+				
+				</div>
+				<p style="margin-bottom:-5px;color:white;">.</p>
+			</div>
+		</div>
+	</div>
+	<div>
+		<div class="container">
+			<div class="row animate-box">
+			
+				<h3 id="other">Other</h3>
+				<p class="heading">Other, miscellaneous commands which do not fall into the previous categories or exist just for fun are listed below.</p>
+				
+				<h4 id="quote">quote, “, qu</h4>
+				<p>Quote a message. Alternatively, create a fake quote.
+				<br><code>Usage: quote &lt;messageID&gt;</code>
+				<br><code>Alternate Usage: quote &lt;user&gt; &lt;text...&gt;</code></p>
+				
+				<h4 id="avatar">avatar, av, profile, icon</h4>
+				<p>Displays an enlarged version of a given user’s avatar, or yours if no user is specified.
+				<br><code>Usage: avatar [user]</code></p>
+				
+				<h4 id="birthday">birthday, bday</h4>
+				<p>Set your birthday. This will be displayed on your profile and will make the bot wish you a happy birthday on your birthday as well as gifting you 500 tokens. For internet safety reasons, only the day and month are required. Please use a number for the day but a word for the month (e.g. 22 Jan or 22 January).
+				<br><code>Usage: birthday &lt;day&gt; &lt;month&gt;</code></p>
+				
+				<h4 id="bio">bio, description, desc</h4>
+				<p>Sets your bio, which is displayed on your profile. Your bio can take up multiple lines if you use multiple lines when you input it, e.g.
+				<br><code>~bio so
+				<br>many
+				<br>lines!</code>
+				<br>will show as multiple lines on your profile as well.
+				<br><code>Usage: bio &lt;description...&gt;</code></p>
+				
+				<h4 id="daily">daily</h4>
+				<p>Grants either you or a given user anywhere from 100 to 300 tokens, excluding streak bonuses for using this command every day. Refreshes every 24 hours.
+				<br><code>Usage: daily [user]</code></p>
+				
+				<h4 id="n00dles">n00dles, noodles, n00dle, noodle, nudes, n00ds, noods</h4>
+				<p>Sends a random picture of noodles.
+				<br><code>Usage: n00dles</code></p>
+				
+				<h4 id="dab">dab</h4>
+				<p>Sends a random dabbing gif.
+				<br><code>Usage: dab</code></p>
+				
+				<h4 id="gaydar">gaydar</h4>
+				<p>Uses the gaydar to determine how gay a given user is, or yourself if no user is specified.
+				<br><code>Usage: gaydar [user]</code></p>
+				
+				<h4 id="dicklength">dicklength, dlength, dl</h4>
+				<p>Find how long a given user’s dick is, or your own if no user is specified.
+				<br><code>Usage: dicklength [user]</code></p>
+				
+				<h4 id="grouphug">grouphug</h4>
+				<p>Initiate a group hug which people can join by adding a hug reaction. The more users join, the more people will be in the group hug gif sent after 5 seconds.
+				<br><code>Usage: grouphug</code></p>
+				
+				<h4 id="waifurate">waifurate, wr</h4>
+				<p>Gets the bot to rate how much of a waifu a given user is, or yourself if no user is specified.
+				<br><code>Usage: waifurate [user]</code></p>
+				
+				<h4 id="insult">insult, roast</h4>
+				<p>Make the bot insult a given user or yourself if no user is specified.
+				<br><code>Usage: insult [user]</code></p>
+				
+				<h4 id="ship">ship</h4>
+				<p>If two users are provided the bot will determine how successful their relationship is and generate as many shipnames as it can using their usernames. Alternatively, two names can be provided (as text) and the bot will just generate shipnames using those two names.
+				<br><code>Usage: ship &lt;user&gt; &lt;user2&gt;</code>
+				<br><code>Alternate Usage: ship &lt;name&gt; &lt;name2&gt;</code></p>
+				
+				<h4 id="remindme">remindme, setreminder</h4>
+				<p>Set a reminder. The timespan can be any mixture of days, hours, minutes, and seconds in any order (e.g. “5h 10s” or “78 min and 3h”)
+				<br><code>Usage: remindme &lt;message&gt; in &lt;timespan&gt;</code></p>
+				
+				<h4 id="mood">mood</h4>
+				<p>Ask Cinnamon how he’s feeling today :3
+				<br><code>Usage: mood</code></p>
+
+			</div>
+		</div>
+	</div>
+	<div class="colorlib-bg-white">
+		<div class="container">
+			<div class="row animate-box">
+			
+			<h2 id="wip">The following sections are still a work in progress</h2>
+			<h3 id="roleplay">Roleplay</h4>
+			<h3 id="lol">League of Legends</h4>
+			<h3 id="ow">Overwatch</h4>
+			
+			</div>
+		</div>
+	</div>
+	<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+
+		for (i = 0; i < coll.length; i++) {
+			coll[i].addEventListener("click", function() {
+				this.classList.toggle("activeC");
+				var content = this.nextElementSibling;
+				if (content.style.maxHeight){
+					content.style.maxHeight = null;
+				} else {
+					content.style.maxHeight = content.scrollHeight + "px";
+				} 
+			});
+		}
+	</script>
+</section>

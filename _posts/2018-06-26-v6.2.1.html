@@ -1,0 +1,69 @@
+---
+layout: post
+title: v6.2.1
+permalink: /changelog/:title
+features: 2
+adjustments: 31
+---
+<div class="colorlib-work-featured colorlib-bg-white">
+	<div class="container">
+		<div class="row mobile-wrap">
+			
+			<div class="animate-box">
+				<div class="desc">
+					<h2>New Features:</h2>
+					<ul style="list-style-type:disc">
+						<li>Brand new website!! The two old websites have been migrated to and merged with this one, in hopes that this will enhance user experience. The home page still needs a bit of work and the commands page needs to be styled properly but for the most part everything looks good</li>
+						<li>Added a secondary <b>help</b> command which can be used to search up a link for a particular command instead of linking to the Commands page in general</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<div class="colorlib-work-featured">
+	<div class="container">
+		<div class="row mobile-wrap">
+			
+			<div class="animate-box">
+				<div class="desc">
+					<h2>Bug Fixes and Adjustments:</h2>
+					<ul style="list-style-type:disc">
+						<li>Fixed a problem with timed <b>autorole</b>s and <b>reminder</b>s that caused the bot to crash for durations longer than 24 days, largely increasing performance in the process</li>
+						<li>Removed a chunk of autorole code that turned out to be completely useless (must’ve been written at 2am)</li>
+						<li>Split the message handler in half so that autoroles and guildstats are handled separately, hopefully this should reduce the amount of gateway blocking that occurs</li>
+						<li>Enhanced the way <b>connect4</b> handles reactions being added, increasing performance significantly</li>
+						<li>Reworked the battle command from the ground up - it now behaves like the rest of the games, with similar commands and display formats as well as improved efficiency/reliability/readability</li>
+						<li>Cleaned up other game formats so that they all have a consistent format</li>
+						<li>Bot will no longer send annoying “Commands cannot be used in this channel” on the support server (wont affect most people)</li>
+						<li>Statuses involving users will no longer include me as I’d like them to reflect the community :3</li>
+						<li>The <b>ship</b> command now ships based on nickname instead of username</li>
+						<li>Shipnames which are the same as one of the input names are now excluded</li>
+						<li>The meters for the <b>ship</b>, <b>gaydar</b>, and <b>waifurate</b> commands now display based on rounded values instead of always rounding down</li>
+						<li>Cinnamon is now un-roastable :')</li>
+						<li>Fixed a bug that allowed the <b>birthday</b> command be abused for grinding tokens</li>
+						<li>Resolved an issue which wouldn't display the player list for <b>connect4</b> lobbies</li>
+						<li>Added <b>cf</b> as an alias for <b>connectfour</b></li>
+						<li>The <b>connect4</b> gameover message now displays "The game was ended prematurely." instead of saying one of the users won, if the game was ended prematurely</li>
+						<li>Addressed a problem with <b>connect4</b> that prevented the reaction for the 7th column from showing up</li>
+						<li>You now lose 3 MMR for each player lost to in a <b>battle</b> instead of 5</li>
+						<li>Expanded upon the <b>battle info</b> command to include an explanation of how the MMR awarding and ranking systems work</li>
+						<li>All game commands now have ' ' as an alias for <b>info</b> (meaning that typing only the name of the game will display the information)</li>
+						<li>Edited the update broadcast so that it links to the <a href="/changelog">new changelog page</a></li>
+						<li>Fixed a <b>cah</b> bug so that it no longer sends a "players left" embed when there are no players left that need to play their turn</li>
+						<li>The embed sent to <b>cah</b> players in DMs with their hand of cards now prompts users to use "cah pick" in the game channel to make it more noob-friendly</li>
+						<li>Links displayed by the <b>help</b> command have been updated to reflect the website changes described above</li>
+						<li>Resolved an issue where <b>quote</b> could be used on messages which contain only an embed (and nothing actually quotable)</li>
+						<li>The error msg displayed when too many or too few parameters are used is now more informative and prompts the user to use the command-specific <b>help</b> command</li>
+						<li>Added dl as an alias for <b>dicklength</b></li>
+						<li>Fixed a bug where the <b>reminder</b> command would say that the timespan entered is invalid when in reality there was just no message being set as the reminder</li>
+						<li>The <b>avatar</b> command should no longer break when used on users with no avatar set</li>
+						<li>Sprinkled with love and affection</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>

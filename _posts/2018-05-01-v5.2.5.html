@@ -1,0 +1,55 @@
+---
+layout: post
+title: v5.2.5
+permalink: /changelog/:title
+features: 4
+adjustments: 13
+---
+<div class="colorlib-work-featured colorlib-bg-white">
+	<div class="container">
+		<div class="row mobile-wrap">
+			
+			<div class="animate-box">
+				<div class="desc">
+					<h2>New Features:</h2>
+					<ul style="list-style-type:disc">
+						<li>Added <b>log</b> and <b>update</b> commands (for my personal use only)</li>
+						<li>Added <b>credits</b> command which will display credits for things like game concepts, art, and suggestions - this will be updated as the bot is developed further</li>
+						<li><b>userinfo</b> now also displays the user's most frequently used command</li>
+						<li>Added stat commands which display analytical data such as most active days, most active hours, most active users, and much more that took TONS of time to work out. You can use <b>guildstats</b>, <strike><b>channelstats</b>, or <b>userstats</b></strike>¹ depending on which kind of stats you want. Note that all stats are averages, recorded from the moment this update goes live (or the moment the bot joins the server), so it will only be an approximation and will not reflect data from the past<br>¹<i>Still a WIP</i></li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<div class="colorlib-work-featured">
+	<div class="container">
+		<div class="row mobile-wrap">
+			
+			<div class="animate-box">
+				<div class="desc">
+					<h2>Bug Fixes and Adjustments:</h2>
+					<ul style="list-style-type:disc">
+						<li>Fixed a bug in which the active user count was (wrongly) being set to a value larger than the encountered user count
+						<li>Completely revamped a large portion of the code to utilise timers, largely reducing the stress on threads
+						<li>Revamped <b>userinfo</b> command so that it looks a bit nicer - <b>Note that it will most likely be reworked completely in the near future</b>
+						<li>Altered the way the permissions system works so that the bot only requests permissions it needs if it doesn't have it for a particular command. For example, if it doesn't have the ManageMessages permission it will only refuse to execute commands which need it (instead of rejecting all commands, as it did before)
+						<li>I will now be personally notified, via DM, every time the bot encounters an exception (runs into a bug) so that I can patch problems as fast as possible :3
+						<li>Fixed a bug causing the bot to crash far more frequently than it needed to
+						<li>Paged embeds (multipage embeds that allow users to change pages using reactions) now display the reason why they close instead of just deleting themselves (e.g. if a user terminates it or if it times out)
+						<li>Resolved yet another issue with <b>broadcast</b> messages
+						<li>Commands will now fail if the bot doesn't have the <b>Embed Links</b> permission, as they should
+						<li>Greatly enhanced database robustness and patched a bug that allowed faulty channels to be stored
+						<li>Modified the <b>birthday</b> feature so that users are now wished a happy birthday not only via DM but also in every guild they share with the bot
+						<li<b>modchannel</b>, <b>logchannel</b>, and <b>cmdchannel</b> commands can now only be used on channels which the bot has permissions in
+						<li>Numerous other bug fixes and efficiency improvements</li>
+						<li>Sprinkled with love and affection</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>

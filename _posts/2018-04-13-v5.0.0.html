@@ -1,0 +1,52 @@
+---
+layout: post
+title: v5.0.0
+permalink: /changelog/:title
+features: 1
+adjustments: 13
+---
+<div class="colorlib-work-featured colorlib-bg-white">
+	<div class="container">
+		<div class="row mobile-wrap">
+			
+			<div class="animate-box">
+				<div class="desc">
+					<h2>New Features:</h2>
+					<ul style="list-style-type:disc">
+						<li>Added <b>guildinfo</b> command which retrieves guild stats</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<div class="colorlib-work-featured">
+	<div class="container">
+		<div class="row mobile-wrap">
+			
+			<div class="animate-box">
+				<div class="desc">
+					<h2>Bug Fixes and Adjustments:</h2>
+					<ul style="list-style-type:disc">
+						<li>Automatic Log/Msg channel setting is no longer logged unnecessarily frequently</li>
+						<li>Renamed <b>commandchannel</b> command to <b>cmdchannel</b></li>
+						<li><b>fortnite profile</b> now returns "No games played." on pages where the user hasn't played any games instead of entirely excluding that page (Also had to disable all time-based stats because of Fortnite's servers)</li>
+						<li><b>cah join</b> confirmation message sent via DMs is now the right colour and format</li>
+						<li>The user stat returned by <b>info</b> was slightly inaccurate and has been updated to address this issue</li>
+						<li>Moved <b>userinfo</b> to the Information module</li>
+						<li>Changed <b>quote</b> timestamp so that its day/month/year instead of being regional</li>
+						<li>Grouped all of the <b>joingmsg</b> and <b>leavemsg</b> commands</li>
+						<li><b>fortnite</b> commands will now also inform the user when the servers are down instead of breaking when trying to access stats</li>
+						<li>Changed the perms Cinnamon requests to reduce paranoia about malicious intent</li>
+						<li>Attempting to execute a command which requires a permission that Cinnamon doesn't have will return an error now</li>
+						<li>Log channels and Message channels which the bot no longer has access too will now automatically be overwritten</li>
+						<li>Fixed a problem with update message broadcasting</li>
+						<li>Sprinkled with love and affection</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>

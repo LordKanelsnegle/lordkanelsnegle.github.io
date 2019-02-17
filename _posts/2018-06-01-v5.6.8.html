@@ -1,0 +1,55 @@
+---
+layout: post
+title: v5.6.8
+permalink: /changelog/:title
+features: 2
+adjustments: 15
+---
+<div class="colorlib-work-featured colorlib-bg-white">
+	<div class="container">
+		<div class="row mobile-wrap">
+			
+			<div class="animate-box">
+				<div class="desc">
+					<h2>New Features:</h2>
+					<ul style="list-style-type:disc">
+						<li><b>autorole delete</b> will now also remove the autorole from every user that has it if the optional parameter <b>fully</b> (see <a href="https://lordkanelsnegle.github.io/commands">commands page</a> for full details)</li>
+						<li>Attempting to use a command in a non-command channel will now delete the command message, send an error, and delete the error as well after a 5 second delay</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<div class="colorlib-work-featured">
+	<div class="container">
+		<div class="row mobile-wrap">
+			
+			<div class="animate-box">
+				<div class="desc">
+					<h2>Bug Fixes and Adjustments:</h2>
+					<ul style="list-style-type:disc">
+						<li>Temporarily disabled the <b>battle</b> command</li>
+						<li>Fixed a bug causing <b>autorole</b>s created with message conditions to fail</li>
+						<li>Fixed a bug that caused the bot to hang on boot because of the way it used to handle <b>autorole</b>s</li>
+						<li>As a result of the above fix I also found the same problem with <b>cmdchannels</b> which I'd just gotten lucky with</li>
+						<li>Vastly improved the performance of <b>autorole add</b> should now execute much faster</li>
+						<li>Fixed a bug that limited timespans to 24h (affects VC stats and <b>autorole</b>s)</li>
+						<li>Resolved an issue in which <b>autoroles</b> were breaking if added without the <b>Manage Roles</b> perm and if user positions were higher than the bot's position</li>
+						<li>VCs will now be considered started when there are at least 2 non-bot users and finished when there is only one non-bot user left in the VC (because a bunch of loners were just AFKing in channels for ages which isn't really a "VC")</li>
+						<li>Timespans can now be in terms of weeks as well, with a new limit of 68 years, and is computed exceptionally faster while being even more forgiving of typos/input format</li>
+						<li>Users who have suggested features will no longer be mentioned in <b>credits</b> but will instead be granted the "Contributor" role on the support server (because it was getting too difficult to keep track of all of the users, especially since they change their names often)</li>
+						<li>Solved a problem that made the bot handle events multiple times (depending on how many times it has reconnected to Discord)</li>
+						<li>Fixed a typo for <b>cmdchannel</b> errors that said "There are no welcome messages [...]" instead of "There are no command channels [...]"</li>
+						<li>Fixed a really annoying <b>ship</b> bug that caused the command to break if usernames were too short, I've known about it for a while but only managed to figure it out this patch</li>
+						<li>Clarified on the main website that parameters containing spaces need to be wrapped with quotes if other arguments are given, and that roles/channels can be used directly as parameters instead of writing their names (@role or #channel instead of the name)</li>
+						<li>Resolved an issue that caused <b>connect4</b> games to time out even if the game had been ended prematurely</li>
+						<li>Sprinkled with love and affection</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
